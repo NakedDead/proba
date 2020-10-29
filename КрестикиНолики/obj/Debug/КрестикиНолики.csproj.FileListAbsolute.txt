@@ -1,0 +1,7 @@
+C:\Users\Алексей\source\repos\КрестикиНолики\bin\Debug\КрестикиНолики.exe.config
+C:\Users\Алексей\source\repos\КрестикиНолики\bin\Debug\КрестикиНолики.exe
+C:\Users\Алексей\source\repos\КрестикиНолики\bin\Debug\КрестикиНолики.pdb
+C:\Users\Алексей\source\repos\КрестикиНолики\obj\Debug\КрестикиНолики.csprojAssemblyReference.cache
+C:\Users\Алексей\source\repos\КрестикиНолики\obj\Debug\КрестикиНолики.csproj.CoreCompileInputs.cache
+C:\Users\Алексей\source\repos\КрестикиНолики\obj\Debug\КрестикиНолики.exe
+C:\Users\Алексей\source\repos\КрестикиНолики\obj\Debug\КрестикиНолики.pdb
