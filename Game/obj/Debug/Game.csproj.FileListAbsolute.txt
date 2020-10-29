@@ -1,0 +1,7 @@
+E:\probapera\Game\bin\Debug\Game.exe.config
+E:\probapera\Game\bin\Debug\Game.exe
+E:\probapera\Game\bin\Debug\Game.pdb
+E:\probapera\Game\obj\Debug\Game.csprojAssemblyReference.cache
+E:\probapera\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+E:\probapera\Game\obj\Debug\Game.exe
+E:\probapera\Game\obj\Debug\Game.pdb
