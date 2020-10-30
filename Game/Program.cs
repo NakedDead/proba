@@ -23,7 +23,7 @@ namespace Game
             }
             Console.WriteLine();
 
-            while (a == false)
+            while (b == false)
             {
                 Console.WriteLine("Ваш ход - строка, столбец:");
                 string str = Console.ReadLine();
@@ -55,102 +55,175 @@ namespace Game
             }
             Console.ReadLine();
         }
-        public static void CMove(string[,] mas)
+        public static bool CMove(string[,] mas)
         {
+            bool a = false;
             if (mas[0, 0] != "-" & mas[0, 1] != "-" & mas[0, 0] == mas[0, 1] & mas[0, 2] == "-")
+            {
                 mas[0, 2] = "X";
+                a = true;
+            }
             else
             {
                 if (mas[0, 1] != "-" & mas[0, 2] != "-" & mas[0, 1] == mas[0, 2] & mas[0, 0] == "-")
+                {
                     mas[0, 0] = "X";
+                    a = true;
+                }
                 else
                 {
                     if (mas[0, 2] != "-" & mas[0, 0] != "-" & mas[0, 2] == mas[0, 0] & mas[0, 1] == "-")
+                    {
                         mas[0, 1] = "X";
+                        a = true;
+                    }
                     else
                     {
                         if (mas[1, 0] != "-" & mas[1, 1] != "-" & mas[1, 0] == mas[1, 1] & mas[1, 2] == "-")
+                        {
                             mas[1, 2] = "X";
+                            a = true;
+                        }
                         else
                         {
                             if (mas[1, 1] != "-" & mas[1, 2] != "-" & mas[1, 1] == mas[1, 2] & mas[1, 0] == "-")
+                            {
                                 mas[1, 0] = "X";
+                                a = true;
+                            }
                             else
                             {
                                 if (mas[1, 2] != "-" & mas[1, 0] != "-" & mas[1, 2] == mas[1, 0] & mas[1, 1] == "-")
+                                {
                                     mas[1, 1] = "X";
+                                    a = true;
+                                }
                                 else
                                 {
                                     if (mas[2, 0] != "-" & mas[2, 1] != "-" & mas[2, 0] == mas[2, 1] & mas[2, 2] == "-")
+                                    {
                                         mas[2, 2] = "X";
+                                        a = true;
+                                    }
                                     else
                                     {
                                         if (mas[2, 1] != "-" & mas[2, 2] != "-" & mas[2, 1] == mas[2, 2] & mas[2, 0] == "-")
+                                        {
                                             mas[2, 0] = "X";
+                                            a = true;
+                                        }
                                         else
                                         {
                                             if (mas[2, 2] != "-" & mas[2, 0] != "-" & mas[2, 2] == mas[2, 0] & mas[2, 1] == "-")
+                                            {
                                                 mas[2, 1] = "X";
+                                                a = true;
+                                            }
                                             else
                                             {
                                                 if (mas[0, 0] != "-" & mas[1, 1] != "-" & mas[0, 0] == mas[1, 1] & mas[2, 2] == "-")
+                                                {
                                                     mas[2, 2] = "X";
+                                                    a = true;
+                                                }
                                                 else
                                                 {
                                                     if (mas[1, 1] != "-" & mas[2, 2] != "-" & mas[1, 1] == mas[2, 2] & mas[0, 0] == "-")
+                                                    {
                                                         mas[0, 0] = "X";
+                                                        a = true;
+                                                    }
                                                     else
                                                     {
                                                         if (mas[2, 2] != "-" & mas[0, 0] != "-" & mas[2, 2] == mas[0, 0] & mas[1, 1] == "-")
+                                                        {
                                                             mas[1, 1] = "X";
+                                                            a = true;
+                                                        }
                                                         else
                                                         {
                                                             if (mas[0, 2] != "-" & mas[1, 1] != "-" & mas[0, 2] == mas[1, 1] & mas[2, 0] == "-")
+                                                            {
                                                                 mas[2, 0] = "X";
+                                                                a = true;
+                                                            }
                                                             else
                                                             {
                                                                 if (mas[1, 1] != "-" & mas[2, 0] != "-" & mas[1, 1] == mas[2, 0] & mas[0, 2] == "-")
+                                                                {
                                                                     mas[0, 2] = "X";
+                                                                    a = true;
+                                                                }
                                                                 else
                                                                 {
                                                                     if (mas[0, 2] != "-" & mas[2, 0] != "-" & mas[0, 2] == mas[2, 0] & mas[1, 1] == "-")
+                                                                    {
                                                                         mas[1, 1] = "X";
+                                                                        a = true;
+                                                                    }
                                                                     else
                                                                     {
                                                                         if (mas[0, 0] != "-" & mas[1, 0] != "-" & mas[0, 0] == mas[1, 0] & mas[2, 0] == "-")
+                                                                        {
                                                                             mas[2, 0] = "X";
+                                                                            a = true;
+                                                                        }
                                                                         else
                                                                         {
                                                                             if (mas[1, 0] != "-" & mas[2, 0] != "-" & mas[1, 0] == mas[2, 0] & mas[0, 0] == "-")
+                                                                            {
                                                                                 mas[0, 0] = "X";
+                                                                                a = true;
+                                                                            }
                                                                             else
                                                                             {
                                                                                 if (mas[2, 0] != "-" & mas[0, 0] != "-" & mas[2, 0] == mas[0, 0] & mas[1, 0] == "-")
+                                                                                {
                                                                                     mas[1, 0] = "X";
+                                                                                    a = true;
+                                                                                }
                                                                                 else
                                                                                 {
                                                                                     if (mas[0, 1] != "-" & mas[1, 1] != "-" & mas[0, 1] == mas[1, 1] & mas[2, 1] == "-")
+                                                                                    {
                                                                                         mas[2, 1] = "X";
+                                                                                        a = true;
+                                                                                    }
                                                                                     else
                                                                                     {
                                                                                         if (mas[1, 1] != "-" & mas[2, 1] != "-" & mas[1, 1] == mas[2, 1] & mas[0, 1] == "-")
+                                                                                        {
                                                                                             mas[0, 1] = "X";
+                                                                                            a = true;
+                                                                                        }
                                                                                         else
                                                                                         {
                                                                                             if (mas[0, 1] != "-" & mas[2, 1] != "-" & mas[0, 1] == mas[2, 1] & mas[1, 1] == "-")
+                                                                                            {
                                                                                                 mas[1, 1] = "X";
+                                                                                                a = true;
+                                                                                            }
                                                                                             else
                                                                                             {
                                                                                                 if (mas[0, 2] != "-" & mas[1, 2] != "-" & mas[0, 2] == mas[1, 2] & mas[2, 2] == "-")
+                                                                                                {
                                                                                                     mas[2, 2] = "X";
+                                                                                                    a = true;
+                                                                                                }
                                                                                                 else
                                                                                                 {
                                                                                                     if (mas[1, 2] != "-" & mas[2, 2] != "-" & mas[1, 2] == mas[2, 2] & mas[0, 2] == "-")
+                                                                                                    {
                                                                                                         mas[0, 2] = "X";
+                                                                                                        a = true;
+                                                                                                    }
                                                                                                     else
                                                                                                     {
                                                                                                         if (mas[0, 2] != "-" & mas[2, 2] != "-" & mas[0, 2] == mas[2, 2] & mas[1, 2] == "-")
+                                                                                                        {
                                                                                                             mas[1, 2] = "X";
+                                                                                                            a = true;
+                                                                                                        }
                                                                                                     }
                                                                                                 }
                                                                                             }
@@ -176,7 +249,6 @@ namespace Game
             }
             Random rnd = new Random();
             int st, s;
-            bool a = false;
             while (a == false)
             {
                 st = rnd.Next(0, 2);
@@ -187,78 +259,127 @@ namespace Game
                     a = true;
                 }
             }
+            return a;
         }
         public static bool Win(string[,] mas, bool b)
         {
             if (mas[0, 0] != "-" & mas[0, 0] == mas[0, 1] & mas[0, 1] == mas[0, 2])
             {
                 if (mas[0, 0] == "0")
+                {
                     Console.WriteLine("Вы победили");
+                    b = true;
+                }
                 else
+                {
                     Console.WriteLine("Вы проиграли");
+                    b = true;
+                }
             }
             else
             {
                 if (mas[1, 0] != "-" & mas[1, 0] == mas[1, 1] & mas[1, 1] == mas[1, 2])
                 {
                     if (mas[1, 0] == "0")
+                    {
                         Console.WriteLine("Вы победили");
+                        b = true;
+                    }
                     else
+                    {
                         Console.WriteLine("Вы проиграли");
+                        b = true;
+                    }
                 }
                 else
                 {
                     if (mas[2, 0] != "-" & mas[2, 0] == mas[2, 1] & mas[2, 1] == mas[2, 2])
                     {
                         if (mas[2, 0] == "0")
+                        {
                             Console.WriteLine("Вы победили");
+                            b = true;
+                        }
                         else
+                        {
                             Console.WriteLine("Вы проиграли");
+                            b = true;
+                        }
                     }
                     else
                     {
                         if (mas[0, 0] != "-" & mas[0, 0] == mas[1, 0] & mas[1, 0] == mas[2, 0])
                         {
                             if (mas[0, 0] == "0")
+                            {
                                 Console.WriteLine("Вы победили");
+                                b = true;
+                            }
                             else
+                            {
                                 Console.WriteLine("Вы проиграли");
+                                b = true;
+                            }
                         }
                         else
                         {
                             if (mas[0, 1] != "-" & mas[0, 1] == mas[1, 1] & mas[1, 1] == mas[2, 1])
                             {
                                 if (mas[0, 1] == "0")
+                                {
                                     Console.WriteLine("Вы победили");
+                                    b = true;
+                                }
                                 else
+                                {
                                     Console.WriteLine("Вы проиграли");
+                                    b = true;
+                                }
                             }
                             else
                             {
                                 if (mas[0, 2] != "-" & mas[0, 2] == mas[1, 2] & mas[1, 2] == mas[2, 2])
                                 {
                                     if (mas[0, 2] == "0")
+                                    {
                                         Console.WriteLine("Вы победили");
+                                        b = true;
+                                    }
                                     else
+                                    {
                                         Console.WriteLine("Вы проиграли");
+                                        b = true;
+                                    }
                                 }
                                 else
                                 {
                                     if (mas[1, 1] != "-" & mas[1, 1] == mas[1, 1] & mas[1, 1] == mas[2, 2])
                                     {
                                         if (mas[1, 1] == "0")
+                                        {
                                             Console.WriteLine("Вы победили");
+                                            b = true;
+                                        }
                                         else
+                                        {
                                             Console.WriteLine("Вы проиграли");
+                                            b = true;
+                                        }
                                     }
                                     else
                                     {
                                         if (mas[2, 2] != "-" & mas[0, 2] == mas[1, 1] & mas[1, 1] == mas[2, 0])
                                         {
                                             if (mas[2, 2] == "0")
+                                            {
                                                 Console.WriteLine("Вы победили");
+                                                b = true;
+                                            }
                                             else
+                                            {
                                                 Console.WriteLine("Вы проиграли");
+                                                b = true;
+                                            }
                                         }
                                     }
                                 }
